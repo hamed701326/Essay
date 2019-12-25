@@ -17,5 +17,7 @@
 
         <!---Mapping-->
         <mapping class="ir.science.essay.entities.User"/>
+        <mapping class="ir.science.essay.entities.Article"/>
+
     </session-factory>
 </hibernate-configuration>

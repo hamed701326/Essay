@@ -1,4 +1,5 @@
 import ir.science.essay.core.configuration.hibernate.HibernateUtil;
+import ir.science.essay.entities.Article;
 import ir.science.essay.entities.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -15,9 +16,15 @@ public class MainApp {
         session.beginTransaction();
         //----------------------------------
         //save
-        User user=new User("asgharmohammadi","607",setDate(1996L,5L,2L),"607");
+        /*User user=new User("asgharmohammadi","607",setDate(1996L,5L,2L),"607");
         int id=(int) session.save(user);
         System.out.printf("User with this %d inserted into table\n",id);
+        */
+       /* Article article=new Article("Global warming", "exploring increasing of temperature of earth",
+                "CO2 effect",new Date(),new Date(),null,false);
+        int id=(int) session.save(article);
+        System.out.printf("Article with this %d inserted into table\n",id);
+        */
 
 
         //----------------------
