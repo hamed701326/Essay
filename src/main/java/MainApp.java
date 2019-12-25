@@ -19,6 +19,7 @@ public class MainApp {
         int id=(int) session.save(user);
         System.out.printf("User with this %d inserted into table\n",id);
 
+
         //----------------------
         //commit transaction
         session.getTransaction().commit();
