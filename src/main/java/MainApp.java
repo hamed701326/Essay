@@ -1,5 +1,6 @@
 import ir.science.essay.core.configuration.hibernate.HibernateUtil;
 import ir.science.essay.entities.Article;
+import ir.science.essay.entities.Category;
 import ir.science.essay.entities.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -25,6 +26,9 @@ public class MainApp {
         int id=(int) session.save(article);
         System.out.printf("Article with this %d inserted into table\n",id);
         */
+        Category category=new Category("Chemical Engineering",null);
+        int id=(int) session.save(category);
+        System.out.printf("Category with this %d inserted into table\n",id);
 
 
         //----------------------

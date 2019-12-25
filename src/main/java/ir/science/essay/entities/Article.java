@@ -28,6 +28,8 @@ public class Article {
     @Column(nullable = false,columnDefinition = "boolean default false")
     private boolean isPublished;
 
+    @ManyToOne
+    private User user;
     public Article() {
     }
 
