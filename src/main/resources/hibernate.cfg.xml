@@ -1,0 +1,21 @@
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">14tir1375</property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost/essays?createDatabaseIfNotExist=true
+        </property>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!---Mapping-->
+        <mapping class="ir.science.essay.entities.User"/>
+    </session-factory>
+</hibernate-configuration>
