@@ -28,15 +28,22 @@ public class Article {
     @Column(nullable = false,columnDefinition = "boolean default false")
     private boolean isPublished;
 
-    @ManyToOne
+    @ManyToOne()
+    @JoinColumn()
     private User user;
+
+    @ManyToOne()
+    @JoinColumn()
+    private Category category;
     public Article() {
     }
 
     public Article(String title, String brief,
                    String content, Date createDate,
                    Date lastUpdateDate, Date publishDate,
-                   boolean isPublished) {
+                   boolean isPublished,
+                   User user,
+                   Category category) {
         this.title = title;
         this.brief = brief;
         this.content = content;
@@ -44,6 +51,25 @@ public class Article {
         this.lastUpdateDate = lastUpdateDate;
         this.publishDate = publishDate;
         this.isPublished = isPublished;
+        this.user=user;
+        this.category=category;
+
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public int getId() {

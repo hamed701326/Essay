@@ -1,6 +1,7 @@
 package ir.science.essay.entities;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -70,5 +71,16 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @OneToMany(mappedBy = "user")
+    private Collection<Article> article;
+
+    public Collection<Article> getArticle() {
+        return article;
+    }
+
+    public void setArticle(Collection<Article> article) {
+        this.article = article;
     }
 }
